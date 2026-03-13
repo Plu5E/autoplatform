@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --brand: #1a3a8f;
+  --brand-light: #e8edf8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Wizard progress bar transitie */
+.progress-fill {
+  transition: width 0.3s ease;
+}
+
+/* Staat-kaarten hover */
+.staat-card {
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+.staat-card:hover {
+  transform: translateY(-1px);
+}
+.staat-card.selected {
+  border-color: var(--brand);
+  background: var(--brand-light);
+}
+
+/* Upload zone */
+.upload-zone {
+  transition: border-color 0.15s, background 0.15s;
+}
+.upload-zone:hover {
+  border-color: var(--brand);
+  background: #f7f9ff;
+}
+
+/* Dashboard sidebar active item */
+.nav-item.active {
+  background: #f0f3fb;
+  color: var(--brand);
+}
+
+/* Status pills */
+.status-nieuw        { background: #e8edf8; color: #0c447c; }
+.status-in_review    { background: #fef3c7; color: #92400e; }
+.status-bod_verstuurd { background: #d1fae5; color: #065f46; }
+.status-geaccepteerd { background: #d1fae5; color: #065f46; }
+.status-afgerond     { background: #f3f4f6; color: #6b7280; }
+.status-afgewezen    { background: #fee2e2; color: #991b1b; }
+.status-vervallen    { background: #fef3c7; color: #92400e; }
+
+/* Tabel hover */
+.lead-row:hover td { background: #f7f9ff; }
